@@ -1,14 +1,15 @@
 <?php
-$server = "tcp:game-simu-edu-server.database.windows.net,1433"; 
+/*$server = "tcp:game-simu-edu-server.database.windows.net,1433"; 
 $user = "hackhack@game-simu-edu-server"; 
 $pwd = "hackPSU!@#";
-$db = 'user';
+$db = 'user';*/
 
-try{
-    $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+try {
+    $conn = new PDO ("sqlsrv:server = tcp:game-simu-edu-server.database.windows.net,1433; Database = game-simu-edu-db", "hackhack", "hackPSU!@#");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
-catch(Exception $e){
+catch ( PDOException $e ) {
+    print( "Error connecting to SQL Server." );
     die(print_r($e));
 }
 echo $conn;
