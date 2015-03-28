@@ -3,7 +3,7 @@
 $user = "hackhack@game-simu-edu-server"; 
 $pwd = "hackPSU!@#";
 $db = 'user';*/
-
+echo "cool";
 try {
     $conn = new PDO ("sqlsrv:server = tcp:game-simu-edu-server.database.windows.net,1433; Database = game-simu-edu-db", "hackhack", "hackPSU!@#");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
