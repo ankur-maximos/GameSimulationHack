@@ -1,0 +1,90 @@
+
+* {
+	font-family: 'Open Sans', sans-serif !important;
+}
+h2{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+h4 {
+	color: white;
+	text-decoration: underline;
+	font-size: 15px;
+}
+hr {
+	margin: 0px;
+}
+.header {
+	background-color: #bb0000;
+}
+.content {
+	background-color: #666666;
+	padding-top: 20px;
+}
+.admin-content {
+	background-color: #666666;
+	margin-top: -12px;
+}
+.nav-bar-headers {
+	color: #FFFFFF !important;
+	font-size: 12px;
+}
+.tab-contents {
+	margin-top: 52px;
+	min-height: 1000px;
+	background-color: white;
+	margin-left: -3%;
+	width: 106%;
+}
+.nav-tabs {
+	border: none;
+}
+
+.nav-links {
+	padding: 0px !important; 
+	margin-top: 6px;
+}
+.admin-nav-links {
+	padding-top: 15px;
+}
+.navbar-nav>li>a {
+	color:#B1FB17 !important;
+	font-weight: bold;
+	padding: 5px;
+}
+.navbar-nav>li {
+	max-width: 110px;
+}
+
+.tab-row-contents {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.nav-header-adjust {
+	padding-left: 30px;
+}
+.dashboard {
+	display: flex;
+}
+#dashboard {
+	padding-left: 5px;
+}
+#rounds {
+	color: white;
+	margin-top: 100%;
+}
+#credits {
+	color: white;
+	margin-top: 100%;
+}
+#header-align {
+	display: flex;
+}
+span.icon { 
+  font-family: 'Glyphicons Halflings'; 
+}
+span.icon:before { 
+  font-family: 'Glyphicons Halflings'; 
+  content:"\e019";
+}
