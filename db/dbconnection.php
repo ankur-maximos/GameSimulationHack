@@ -1,6 +1,6 @@
 <?php
-$server = 'game-simu-edu-server.database.windows.net,1433'; 
-$serverusername = 'hackhack'; 
+$server = 'tcp:game-simu-edu-server.database.windows.net,1433'; 
+$serverusername = 'hackhack@game-simu-edu-server'; 
 $serverpassword = 'hackPSU!@#';
 $db = 'user';
 
