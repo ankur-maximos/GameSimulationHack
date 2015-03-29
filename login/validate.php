@@ -17,7 +17,7 @@ if(isset($_POST['inputPassword'])) {
 if(isset($_POST['inputSimId'])) {
     $simId = $_POST['inputSimId'];
 }
-echo validate($email, $password);
+
 if ($type == 2 && validate_prof($email, $password) == 1) {
     $_SESSION["email"] = $email;
     header('Location: http://www.google.com');
