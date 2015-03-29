@@ -21,9 +21,9 @@
     <![endif]-->
 	<?php
 	    //session_start();
-        if (session_status() == PHP_SESSION_NONE) {
+        /*if (session_status() == PHP_SESSION_NONE) {
             header('Location: login.php');
-        }
+        }*/
     ?>
 </head>
 <body>
