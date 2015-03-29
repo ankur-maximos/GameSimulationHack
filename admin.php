@@ -21,7 +21,7 @@
     <![endif]-->
 	<?php
 	    session_start();
-        if (!isset($_SESSION['email']) || $_SESSION['email'] = "") {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
             header('Location: login.php');
         }
     ?>
