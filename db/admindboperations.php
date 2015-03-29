@@ -56,10 +56,9 @@ function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 
 
 //function for initializing decision table
-function initDecisionTable($sim_id,$decision_vars,$types) {
+function initializeDecisionTable($sim_id,$decision_vars,$types) {
 	$conn = connect();
 	createDecisionTable($sim_id);
-
 	
 	for($i = 0; $i < count($decision_vars); $i++) {
 	    $sql = "INSERT INTO [decision".$sim_id."] (D_NAME,D_TYPE) VALUES(?,?)";
@@ -81,11 +80,9 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
 
 
 //function for initializing variables values
-function initVariableTable($sim_id,$variable_vars,$equations) {
+function initializeVariableTable($sim_id,$variable_vars,$equations) {
 	$conn = connect();
 	createVariableTable($sim_id);
-
-	
 	for($i = 0; $i < count($variable_vars); $i++) {
 	    $sql = "INSERT INTO [variable" . $sim_id . "] (V_NAME,V_EQUATION) VALUES(?,?)";
 	    $stmt = $conn->prepare($sql);
