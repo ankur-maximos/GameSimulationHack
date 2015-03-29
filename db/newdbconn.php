@@ -18,7 +18,7 @@ function getAllItems($table) {
 }
 function validate($username, $password) {
     $conn = connect();
-    $sql = "SELECT * FROM [user] WHERE ID = ? AND Password = ?";
+    $sql = "SELECT COUNT(*) FROM [user] WHERE ID = ? AND Password = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
