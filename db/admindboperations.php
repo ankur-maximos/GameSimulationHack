@@ -5,13 +5,13 @@ include('dbconnection.php');
 function addSim($sim_id, $sim_pass, $sim_name)
 {
 	$conn = connect();
-	$sql = "INSERT INTO [SIMULATION_TABLES] (email,SIM_ID,SIM_PASSWORD,SIM_NAME) VALUES (?, ?, ?, ?)";
+	$sql = "INSERT INTO [simulation_table] (User_ID,Sim_ID,Sim_Password,Sim_Name) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
-	$user_id = $_SESSION("emailid");
+	$user_id = $_SESSION("email");
 	$stmt->bindValue(1, $user_id);
 	$stmt->bindValue(2, $sim_id);
 	$stmt->bindValue(3, $sim_pass);
-	$stmt->bindValue(4, $sim_name);
+	$stmt->bindValue(4, $sim_name); 	 	
     try {
         $stmt->execute();
     } catch(PDOException $e) {
@@ -57,8 +57,8 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
 	createDecisionTable($sim_id);
 
 	
-	for($i = 0; $i < count($decision_vars); $i ++) {
-	    $sql = "INSERT INTO [decision" . $sim_id . "] (D_NAME D_TYPE) VALUES(? ?)";
+	for($i = 0; $i < count($decision_vars); $i++) {
+	    $sql = "INSERT INTO [decision".$sim_id."] (D_NAME,D_TYPE) VALUES(?,?)";
 	    $stmt = $conn->prepare($sql);
 	    $stmt->bindValue(1, $decision_vars[$i]);
 	    $stmt->bindValue(2, $types[$i]);
@@ -81,8 +81,8 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
 	createVariableTable($sim_id);
 
 	
-	for($i = 0; $i < count($variable_vars); $i ++) {
-	    $sql = "INSERT INTO [variable" . $sim_id . "] (V_NAME V_EQUATION) VALUES(? ?)";
+	for($i = 0; $i < count($variable_vars); $i++) {
+	    $sql = "INSERT INTO [variable" . $sim_id . "] (V_NAME,V_EQUATION) VALUES(?,?)";
 	    $stmt = $conn->prepare($sql);
 	    $stmt->bindValue(1, $variable_vars[$i]);
 	    $stmt->bindValue(2, $equations[$i]);
@@ -101,11 +101,7 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
 
 function createDecisionTable($sim_id) {
 	$conn = connect();
-	$sql = "CREATE TABLE [decision" . $sim_id . "]
-			(
-			    D_NAME varchar(255),
-				D_TYPE int
-			)";
+	$sql = "CREATE TABLE [decision".$sim_id."] (D_NAME varchar(255),D_TYPE int)";
     $stmt = $conn->prepare($sql);	
     try {
         $stmt->execute();
@@ -118,11 +114,7 @@ function createDecisionTable($sim_id) {
 
 function createVariableTable($sim_id) {
 	$conn = connect();
-	$sql = "CREATE TABLE [variable" . $sim_id . "]
-			(
-			    V_NAME varchar(255),
-				V_EQUATION varchar(255)
-			)";
+	$sql = "CREATE TABLE [variable" . $sim_id ."] (V_NAME varchar(255),V_EQUATION varchar(255))";
     $stmt = $conn->prepare($sql);	
     try {
         $stmt->execute();
