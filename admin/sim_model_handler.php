@@ -10,6 +10,9 @@ include("../db/admindboperations.php");
 }*/
 
 //$uuid = uniqid('uid_');
+
+header('Location: ../index.html');
+
 try{
 
 if(isset($_POST['name-field'])) {
