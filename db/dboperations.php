@@ -2,7 +2,7 @@
 include('dbconnection.php');
 function markItemComplete($table, $item_id) {
 	$conn = connect();
-	$sql = "UPDATE ? SET is_complete = 1 WHERE id = ?";
+	$sql = "UPDATE ? SET is_complete = 1 WHERE ID = ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $table);
 	$stmt->bindValue(2, $item_id);
