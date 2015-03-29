@@ -18,15 +18,11 @@ function getAllItems($table) {
 }
 function validate($username, $password, $type) {
     $conn = connect();
-    $sql = "SELECT * FROM [user] WHERE ID = ? AND Password = ? AND Type = ?";
+    $sql = "SELECT * FROM user WHERE ID = ? AND Password = ?";
     //$sql = "SELECT * FROM user";
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
-    $stmt->bindValue(3, $type);
-    //$rows->query($stmt);
-    //$result->execute(); 
-    //return $result->fetchColumn();
     try {
         $stmt->execute();
     } catch(PDOException $e) {
