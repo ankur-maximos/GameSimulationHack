@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<?php
-        if(session_id() == '' || !isset($_SESSION)) {
+        if (!isset($_SESSION) || !isset($_SESSION['email'])) {
             header('Location: login.php');
         }
     ?>
