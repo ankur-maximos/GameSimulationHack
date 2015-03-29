@@ -18,13 +18,11 @@ function getAllItems($table) {
 }
 function validate($username, $password, $type) {
     $conn = connect();
-    $sql = "SELECT * FROM user WHERE ID = ? AND Password = ? AND Type = ?";
+    //$sql = "SELECT * FROM user WHERE ID = ? AND Password = ? AND Type = ?";
+    $sql = "SELECT * FROM user WHERE ID = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(1, $username);
-    $stmt->bindValue(2, $password);
-    $stmt->bindValue(3, $type);
-    return $username;
-    return $stmt;
+    //return $stmt;
     return $stmt->execute();
 }
 function deleteItem($table, $item_id) {
