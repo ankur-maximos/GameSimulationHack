@@ -27,6 +27,7 @@ function validate($username, $password, $type) {
     $rows->query($stmt);
     //$result->execute(); 
     //return $result->fetchColumn();
+    return $conn->errorInfo();
     return count($rows);
 }
 function deleteItem($table, $item_id) {
