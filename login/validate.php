@@ -15,11 +15,12 @@ if(isset($_POST['inputPassword'])) {
     $password = $_POST['inputPassword'];
 }
 
-echo validate($email, $password, $type);
-if (validate($email, $password, $type) == 1) {
+if ($type == 2 && validate($email, $password) == 1) {
     $_SESSION["email"] = $email;
     echo $email;
     header('Location: http://www.google.com');
 }
+
+
 echo $email;
 ?>
