@@ -4,14 +4,14 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Fruit Consumption'
+            text: 'Marginal Cost vs Profit'
         },
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            categories: ['Cost function', 'Marginal Profit', 'Profit']
         },
         yAxis: {
             title: {
-                text: 'Fruit eaten'
+                text: 'Rounds'
             }
         },
         series: [{
