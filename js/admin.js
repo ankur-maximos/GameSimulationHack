@@ -37,6 +37,9 @@ $(document).ready(function(){
 	$('#start-confirm').text("Start Time:  "+$("input[name='start-field']").val());
 	$('#end-confirm').text("End Time:  "+$("input[name='end-field']").val());
 	$('#step-confirm').text("Initial Step:  "+$("input[name='step-field']").val());
+	$("label[name='decision-num']").text(decisionNum);
+	$("label[name='variable-num']").text(variableNum);
+	
 	
 	for(var i=0;i<decisionNum;i++) {
 		var decisionNameValue=$("input[name='decision-name-field']")[0];

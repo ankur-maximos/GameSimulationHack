@@ -225,8 +225,11 @@
                                                                 </div>
                                                                 <div class="control-group">
                                                                     <label class="control-label" id="step-confirm"></label>
+										
 
                                                                 </div>
+																<label name="decision-num" class="invisible"></label>
+																<label name="variable-num" class="invisible"></label>
                                                                 <div style="height: 30px"></div>
                                                                 <table class="table table-bordered" id="decision-confirm">
                                                                     <caption>Decisions</caption>
