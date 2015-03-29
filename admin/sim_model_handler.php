@@ -1,6 +1,6 @@
 <?php
-include("../db/newdbconn.php");
-include("../db/admindboperations.php");
+include_once("../db/newdbconn.php");
+include_once("../db/admindboperations.php");
 
 /*function randNum($begin=0,$end=20,$limit=5){
    $rand_array=range($begin,$end);
