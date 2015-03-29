@@ -23,12 +23,15 @@ function validate($username, $password) {
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
     try {
-        $result->query($stmt);
+        $stmt->execute();
     } catch(PDOException $e) {
         print( "Error " );
         die(print_r($e));
     }
-    return $result->rowCount();
+    if ($stmt->fetchColumn() > 0)
+    	return 1;
+    else
+    	return 0;
 }
 function deleteItem($table, $item_id) {
 	$conn = connect();
