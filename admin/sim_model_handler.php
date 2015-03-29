@@ -23,11 +23,13 @@ if(isset($_POST['decision-num'])) {
     $decision_num  = $_POST['decision-num'];
 }
 
+$decision_name_field = array();
+$decision_type_field = array();
 for ($i = 1; $i < $decision_num + 1; $i++) {
     $dnf = "decision-name-field" . $i;
-    $decision_name_field[$i - 1] = $_POST[$dnf];
+    array_push($decision_name_field, $_POST[$dnf]);
     $dtf = "decision-type-field" . $i;
-    $decision_type_field[$i - 1] = $_POST[$dtf];
+    array_push($decision_type_field, $_POST[$dtf]);
 }
 
 $variable_num;
@@ -35,11 +37,13 @@ if(isset($_POST['variable-num'])) {
     $variable_num  = $_POST['variable-num'];
 }
 
+$variable_name_field = array();
+$variable_equation_type_field = array();
 for ($i = 1; $i < $variable_num + 1; $i++) {
     $dnf = "variable-name-field" . $i;
-    $variable_name_field[$i - 1] = $_POST[$dnf];
+    array_push($variable_name_field, $_POST[$dnf]);
     $dtf = "variable-equation-field" . $i;
-    $variable_equation_field[$i - 1] = $_POST[$dtf];
+    array_push($variable_equation_field, $_POST[$dtf]);
 }
 
 echo $variable_equation_field[0];
