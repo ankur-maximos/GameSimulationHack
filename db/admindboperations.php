@@ -18,6 +18,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 // Creating the Model table corresponding Add Simulation
@@ -47,6 +48,7 @@ function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 //function for initializing decision table
@@ -70,6 +72,7 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 //function for initializing variables values
@@ -93,6 +96,7 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 function createDecisionTable($sim_id) {
@@ -109,6 +113,7 @@ function createDecisionTable($sim_id) {
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 function createVariableTable($sim_id) {
@@ -125,6 +130,7 @@ function createVariableTable($sim_id) {
         print( "Error " );
         die(print_r($e));
     }
+        unset($conn);
 }
 
 
