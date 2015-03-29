@@ -1,5 +1,5 @@
 <?php
-
+include('dboperations.php');
 
 
 // Creating a new Simulation into already existing SIMULATION_TABLES
@@ -36,7 +36,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
 }*/
 
 // Initializing the model table created into existing SIM_MODEL_TABLE
-/*
+
 function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 	$conn = connect();
 	$sql = "INSERT INTO [sim_model_table] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
@@ -54,7 +54,7 @@ function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
         unset($conn);
 }
 
-/*
+
 //function for initializing decision table
 function initDecisionTable($sim_id,$decision_vars,$types) {
 	$conn = connect();
@@ -78,8 +78,8 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
     }
         unset($conn);
 }
-*/
-/*
+
+
 //function for initializing variables values
 function initVariableTable($sim_id,$variable_vars,$equations) {
 	$conn = connect();
@@ -102,8 +102,8 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
         die(print_r($e));
     }
         unset($conn);
-}*/
-/*
+}
+
 function createDecisionTable($sim_id) {
 	$conn = connect();
 	$sql = "CREATE TABLE [decision".$sim_id."] (D_NAME varchar(255),D_TYPE int)";
@@ -142,5 +142,5 @@ function createVariableTable($sim_id) {
 // $end_time = $_POST["end_time"];
 // $initial_steps = $_POST["initial_steps"];
 // initializeModelTable($start_time, $end_time, $initial_steps);
-*/
+
 ?>
