@@ -21,8 +21,8 @@
     <![endif]-->
 	 <?php
       if(session_status() == PHP_SESSION_NONE) {
-      header('Location: login.php');
-    }
+        header('Location: login.php');
+        }
     ?>
 </head>
 <body>

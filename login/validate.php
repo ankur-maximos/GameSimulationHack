@@ -20,7 +20,7 @@ if(isset($_POST['inputSimId'])) {
 
 if ($type == 2 && validate_prof($email, $password) == 1) {
     $_SESSION["email"] = $email;
-    header('Location: ../admin.html');
+    header('Location: ../admin.php');
 }
 
 if ($type == 1 && validate_class($email, $password, $simId) == 1) {
