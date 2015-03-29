@@ -33,6 +33,7 @@ function validate($username, $password, $type) {
         print( "Error " );
         die(print_r($e));
     }
+    return 1;
 }
 function deleteItem($table, $item_id) {
 	$conn = connect();
