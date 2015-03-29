@@ -5,8 +5,8 @@ $type = 0;
 $email;
 $password;
 $active;
-echo "ok";
 if (isset($_POST['submit'])) {
+    echo "ok";
     if(isset($_POST['radio'])) {
         $type = $_POST['radio'];
     }
