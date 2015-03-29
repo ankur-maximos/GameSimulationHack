@@ -1,5 +1,5 @@
 <?php
-include(dbconnection.php);
+include("dbconnection.php");
 
 // Creating a new Simulation into already existing SIMULATION_TABLES
 function addSim($sim_table, $sim_pass)
