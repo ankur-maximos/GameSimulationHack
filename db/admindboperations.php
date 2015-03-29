@@ -52,20 +52,18 @@ function initializeModelTable($start_time, $end_time, $initial_steps,$sim_name) 
 //function for initializing decision table
 function initDecisionTable($sim_id,$decision_vars,$types) {
 	$conn = connect();
+	createDecisionTable($sim_id);
 
-	$sql = "INSERT INTO [DECISION_MODEL_TABLE] (SIM_ID,";
-	foreach ($decision_vars as $key => $value) {
-		# code...
+	
+	for($i = 0; $i < count($decision_vars); $i ++) {
+	    $sql = "INSERT INTO [decision" . $sim_id . "] (D_NAME D_TYPE) VALUES(? ?)";
+	    $stmt = $conn->prepare($sql);
+	    $stmt->bindValue(1, $decision_vars[$i]);
+	    $stmt->bindValue(2, $types[$i]);
 	}
-	foreach ($decision_vars as $key => $value) {
-		# code...
-	}
-	$sql = "INSERT INTO [DECISION_MODEL_TABLE] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
-	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(1, $sim_name);
-	$stmt->bindValue(2, $start_time);
-	$stmt->bindValue(3, $end_time);
-	$stmt->bindValue(4, $initial_steps);
+	// foreach ($types as $key => $value) {
+	// 	# code...
+	// }
 	try {
         $stmt->execute();
     } catch(PDOException $e) {
@@ -75,8 +73,58 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
 }
 
 //function for initializing variables values
-function initVariableTable() {
+function initVariableTable($sim_id,$variable_vars,$equations) {
+	$conn = connect();
+	createVariableTable($sim_id);
 
+	
+	for($i = 0; $i < count($variable_vars); $i ++) {
+	    $sql = "INSERT INTO [variable" . $sim_id . "] (V_NAME V_EQUATION) VALUES(? ?)";
+	    $stmt = $conn->prepare($sql);
+	    $stmt->bindValue(1, $variable_vars[$i]);
+	    $stmt->bindValue(2, $equations[$i]);
+	}
+	// foreach ($types as $key => $value) {
+	// 	# code...
+	// }
+	try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
+}
+
+function createDecisionTable($sim_id) {
+	$conn = connect();
+	$sql = "CREATE TABLE [decision" . $sim_id . "]
+			(
+			    D_NAME varchar(255),
+				D_TYPE int
+			)";
+    $stmt = $conn->prepare($sql);	
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
+}
+
+function createVariableTable($sim_id) {
+	$conn = connect();
+	$sql = "CREATE TABLE [variable" . $sim_id . "]
+			(
+			    V_NAME varchar(255),
+				V_EQUATION varchar(255)
+			)";
+    $stmt = $conn->prepare($sql);	
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
 
 
