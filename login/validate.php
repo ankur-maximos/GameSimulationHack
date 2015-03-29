@@ -14,7 +14,7 @@ if(isset($_POST['inputEmail'])) {
 if(isset($_POST['inputPassword'])) {
     $password = $_POST['inputPassword'];
 }
-echo $type + $email + $password;
+echo $type . $email . $password;
 
 echo validate($email, $password, $type);
 if (validate($email, $password, $type) == 1) {
