@@ -3,6 +3,7 @@ include('dbconnection.php');
 
 
 // Creating a new Simulation into already existing SIMULATION_TABLES
+/*
 function addSim($sim_id, $sim_pass, $sim_name)
 {
 	$conn = connect();
@@ -20,7 +21,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
         die(print_r($e));
     }
         unset($conn);
-}
+}*/
 
 // Creating the Model table corresponding Add Simulation
 /*function createModelTable($sim_table, $sim_pass) {
