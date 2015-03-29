@@ -228,8 +228,8 @@
 										
 
                                                                 </div>
-																<label name="decision-num" class="invisible"></label>
-																<label name="variable-num" class="invisible"></label>
+																<input type="text" name="decision-num" class="invisible"></input>
+																<input type="text" name="variable-num" class="invisible"></input>
                                                                 <div style="height: 30px"></div>
                                                                 <table class="table table-bordered" id="decision-confirm">
                                                                     <caption>Decisions</caption>
