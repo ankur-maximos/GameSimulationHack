@@ -23,6 +23,7 @@ function validate($username, $password, $type) {
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
     $stmt->bindValue(3, $type);
+    return $username;
     return $stmt;
     return $stmt->execute();
 }
