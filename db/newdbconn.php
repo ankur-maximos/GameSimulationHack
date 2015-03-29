@@ -24,11 +24,14 @@ function validate($username, $password, $type) {
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
     $stmt->bindValue(3, $type);
-    $rows->query($stmt);
+    //$rows->query($stmt);
     //$result->execute(); 
     //return $result->fetchColumn();
-    return $conn->errorInfo();
-    return count($rows);
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        echo $e->getMessage();
+    }
 }
 function deleteItem($table, $item_id) {
 	$conn = connect();
