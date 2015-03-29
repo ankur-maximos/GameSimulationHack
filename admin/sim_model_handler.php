@@ -8,8 +8,8 @@ include("../db/admindboperations.php");
    return array_slice($rand_array,0,$limit);
 }*/
 
-$uuid = uniqid('uid_');
-echo $uuid;
+//$uuid = uniqid('uid_');
+//echo $uuid;
 
 if(isset($_POST['name-field'])) {
     $name_field = $_POST['name-field'];
