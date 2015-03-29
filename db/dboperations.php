@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('dbconnection.php');
 function markItemComplete($table, $item_id) {
 	$conn = connect();

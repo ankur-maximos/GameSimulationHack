@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("dbconnection.php");
 
 // Creating a new Simulation into already existing SIMULATION_TABLES

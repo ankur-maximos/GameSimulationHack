@@ -1,4 +1,5 @@
 <?php
+session_start();
 function connect() {
     try {
         $conn = new PDO ("sqlsrv:server = tcp:game-simu-edu-server.database.windows.net,1433; Database = game-simu-edu-db", "hackhack", "hackPSU!@#");

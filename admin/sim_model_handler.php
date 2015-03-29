@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 include("../db/admindboperations.php");
 
 /*function randNum($begin=0,$end=20,$limit=5){
