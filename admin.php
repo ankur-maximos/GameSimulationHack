@@ -199,12 +199,35 @@
                                                                         <button class="btn btn-danger delete-btn variable-delete">
                                                                             <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Delete
                                                                         </button>
+                                                                        <button class="btn btn-success  next-btn">
+                                                                            Next Step
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+															
+															<div id="password-form" class="col-md-0 invisible">
+                                                                <div class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Set a Password</legend>
+                                                                </div>
+																<div class="control-group">          
+                                                                    <div class="controls">
+                                                                        <input type="password" name="password-field" placeholder="" class="input-xlarge">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+																    <div style="height: 20px"></div>
+                                                                    <div class="controls">
                                                                         <button class="btn btn-success confirm-btn">
                                                                             Confirm
                                                                         </button>
                                                                     </div>
                                                                 </div>
                                                             </div>
+																
+															
+															</div>
 
                                                             <div id="confirm-table" class="col-md-0 invisible">
                                                                 <div class="">
