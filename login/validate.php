@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     }
 }
 if (validate($email, $password, $type) == 1) {
-    setcookie("email", $email);
+    $_SESSION["email"] = $email;
     header('Location: '."google.com");
 }
 
