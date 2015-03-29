@@ -13,7 +13,8 @@ function getAllItems($table) {
 	$sql = "SELECT * FROM ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $table);
-	$stmt->execute();
+	$result->query($stmt);
+	return $result->fetchAll(PDO::FETCH_NUM);
 }
 /*function addItem($name, $category, $date, $is_complete)
 {
