@@ -88,3 +88,22 @@ span.icon:before {
   font-family: 'Glyphicons Halflings'; 
   content:"\e019";
 }
+
+.tab-row-contents {
+	align: center;
+}
+
+.content-center{
+    margin: 0 auto;
+	width: 800px;
+}
+
+.invisible {
+	opacity: 0;
+    height: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
