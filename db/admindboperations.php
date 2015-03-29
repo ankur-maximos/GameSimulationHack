@@ -36,6 +36,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
 }*/
 
 // Initializing the model table created into existing SIM_MODEL_TABLE
+/*
 function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 	$conn = connect();
 	$sql = "INSERT INTO [sim_model_table] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
@@ -102,7 +103,7 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
     }
         unset($conn);
 }*/
-
+/*
 function createDecisionTable($sim_id) {
 	$conn = connect();
 	$sql = "CREATE TABLE [decision".$sim_id."] (D_NAME varchar(255),D_TYPE int)";
@@ -141,5 +142,5 @@ function createVariableTable($sim_id) {
 // $end_time = $_POST["end_time"];
 // $initial_steps = $_POST["initial_steps"];
 // initializeModelTable($start_time, $end_time, $initial_steps);
-
+*/
 ?>
