@@ -19,3 +19,10 @@ body {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
 	background-color: #FFFFFF;
 }
+
+.table {
+	/*float: left; */
+	/*width: 40%;*/
+	margin-right: 20%;
+	margin-top: 2%;
+}

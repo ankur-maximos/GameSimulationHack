@@ -38,8 +38,6 @@
   <body>
 
     <div class="container">
-
-
       <form class="form-signin" action="login/validate.php" method="post">
         <h3 class="form-signin-heading">Log in</h3>
         <h5>Please choose your account type</h5>
