@@ -51,7 +51,7 @@
         </label>
         <div id="simId">
           <label for="inputSimId" class="sr-only">Simulation ID</label>
-          <input type="simulationId" id="inputSimId" name="inputSimId" class="form-control" placeholder="Simulation ID" required="">
+          <input type="simulationId" id="inputSimId" name="inputSimId" class="form-control" placeholder="Simulation ID" required="" autofocus="">
         </div>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
