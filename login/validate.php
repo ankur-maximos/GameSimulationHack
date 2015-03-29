@@ -20,7 +20,4 @@ if ($type == 2 && validate($email, $password) == 1) {
     echo $email;
     header('Location: http://www.google.com');
 }
-
-
-echo $email;
 ?>

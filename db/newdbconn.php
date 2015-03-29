@@ -16,7 +16,7 @@ function getAllItems($table) {
 	$result->query($stmt);
 	return $result->fetchAll(PDO::FETCH_NUM);
 }
-function validate($username, $password, $type) {
+function validate($username, $password) {
     $conn = connect();
     $sql = "SELECT * FROM [user] WHERE ID = ? AND Password = ?";
     $stmt = $conn->prepare($sql);
