@@ -29,16 +29,6 @@ function validate_prof($username, $password) {
         print( "Error " );
         die(print_r($e));
     }
-    $sql1 = "UPDATE [user] SET Active = ? WHERE ID = ?";
-    $stmt1 = $conn->prepare($sql1);
-    $stmt1->bindValue(1, 1);
-    $stmt1->bindValue(2, $username);
-    try {
-        $stmt1->execute();
-    } catch(PDOException $e) {
-        print( "Error " );
-        die(print_r($e));
-    }
     if ($stmt->fetchColumn() > 0)
     	return 1;
     else
