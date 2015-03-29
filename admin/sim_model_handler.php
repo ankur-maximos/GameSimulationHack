@@ -60,10 +60,10 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
     array_push($variable_equation_field, $_POST[$dtf]);
 }
 
- addSim($uuid,$password_field,$name_field);
- initializeModelTable($uuid,$start_field,$end_field,$step_field);
- initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
- initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
+//  addSim($uuid,$password_field,$name_field);
+//  initializeModelTable($uuid,$start_field,$end_field,$step_field);
+//  initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
+//  initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
 } catch(PDOException $e) {
         print( "Error " );
         die(print_r($e));
