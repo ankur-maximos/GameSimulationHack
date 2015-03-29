@@ -37,10 +37,11 @@ function validate_prof($username, $password) {
 
 function validate_class($username, $password, $simId) {
     $conn = connect();
-    $sql = "SELECT COUNT(*) FROM [user] WHERE ID = ? AND Password = ?";
+    $sql = "SELECT COUNT(*) FROM [simulation_table] WHERE User_ID = ? AND Sim_ID = ? AND Sim_Password = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindValue(1, $username);
-    $stmt->bindValue(2, $password);
+    $stmt->bindValue(2, $simId);
+    $stmt->bindValue(3, $password);
     try {
         $stmt->execute();
     } catch(PDOException $e) {
