@@ -1,6 +1,7 @@
 <?php
 include('dbconnection.php');
 
+
 // Creating a new Simulation into already existing SIMULATION_TABLES
 function addSim($sim_id, $sim_pass, $sim_name)
 {
@@ -51,6 +52,7 @@ function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
         unset($conn);
 }
 
+/*
 //function for initializing decision table
 function initDecisionTable($sim_id,$decision_vars,$types) {
 	$conn = connect();
@@ -74,7 +76,8 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
     }
         unset($conn);
 }
-
+*/
+/*
 //function for initializing variables values
 function initVariableTable($sim_id,$variable_vars,$equations) {
 	$conn = connect();
@@ -97,7 +100,7 @@ function initVariableTable($sim_id,$variable_vars,$equations) {
         die(print_r($e));
     }
         unset($conn);
-}
+}*/
 
 function createDecisionTable($sim_id) {
 	$conn = connect();
