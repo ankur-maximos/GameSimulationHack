@@ -7,6 +7,7 @@ function markItemComplete($table, $item_id) {
 	$stmt->bindValue(1, $table);
 	$stmt->bindValue(2, $item_id);
 	$stmt->execute();
+	unset($conn);
 }
 function getAllItems($table) {
 	$conn = connect();
@@ -14,6 +15,7 @@ function getAllItems($table) {
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $table);
 	$result->query($stmt);
+	unset($conn);
 	return $result->fetchAll(PDO::FETCH_NUM);
 }
 function validate_prof($username, $password) {
@@ -28,6 +30,7 @@ function validate_prof($username, $password) {
         print( "Error " );
         die(print_r($e));
     }
+    unset($conn);
     if ($stmt->fetchColumn() > 0)
     	return 1;
     else
@@ -47,6 +50,7 @@ function validate_class($username, $password, $simId) {
         print( "Error " );
         die(print_r($e));
     }
+    unset($conn);
     if ($stmt->fetchColumn() > 0)
     	return 1;
     else
@@ -60,5 +64,6 @@ function deleteItem($table, $item_id) {
 	$stmt->bindValue(1, $table);
 	$stmt->bindValue(2, $item_id);
 	$stmt->execute();
+	unset($conn);
 }
 ?>
