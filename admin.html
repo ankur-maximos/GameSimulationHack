@@ -72,89 +72,198 @@
                                 <div class="tab-contents">
                                     <div class="container-fluid">
                                         <div class="tab-row-contents row">
-										    <div id="admin-welcome" class="col-md-12">
-											            <div class="control-group">
-                                                            <div class="controls">
-                                                                <button id="create-btn" class="btn btn-success">
-                                                                    Create a new simulation
-                                                                </button>
+                                            <div id="admin-welcome" class="col-md-12">
+                                                <div class="control-group">
+                                                    <div class="controls">
+                                                        <button id="create-btn" class="btn btn-success">
+                                                            Create a new simulation
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="create-form" class="col-md-0">
+                                                <form class="form-horizontal content-right">
+                                                    <fieldset>
+                                                        <div class="row">
+                                                            <div id="init-form" class="col-md-12">
+
+                                                                <div id="legend" class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Simulation Name</legend>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <div class="controls">
+                                                                        <input type="text" name="name-field" placeholder="" class="input-xlarge">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div id="Div1" class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">How Many Players</legend>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <div class="controls">
+                                                                        <input type="number" name="people-field" placeholder="" class="input-xlarge">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <div style="height: 40px"></div>
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success next-btn">
+                                                                            Next Step
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="basic-form" class="col-md-0 invisible">
+                                                                <div id="Div2" class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Model</legend>
+                                                                </div>
+                                                                <div class="control-group">
+
+                                                                    <label class="control-label" for="input01">Start Time</label>
+                                                                    <div class="controls">
+                                                                        <input type="number" name="start-field" placeholder="" class="input-xlarge">
+                                                                        <div style="height: 20px"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+
+                                                                    <label class="control-label" for="input01">End Time</label>
+                                                                    <div class="controls">
+                                                                        <input type="number" name="end-field" placeholder="" class="input-xlarge">
+                                                                        <div style="height: 20px"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="control-group">
+
+                                                                    <label class="control-label" for="input01">Initial Step</label>
+                                                                    <div class="controls">
+                                                                        <input type="number" name="step-field" placeholder="" class="input-xlarge">
+                                                                        <div style="height: 20px"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="control-group">
+                                                                    <div style="height: 40px"></div>
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success next-btn">
+                                                                            Next Step
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="decision-form" class="col-md-0 invisible">
+                                                                <div class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Decisions</legend>
+                                                                </div>
+
+
+                                                                <div class="control-group">
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success add-btn decision-add">
+                                                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add
+                                                                        </button>
+                                                                        <button class="btn btn-danger delete-btn decision-delete">
+                                                                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Delete
+                                                                        </button>
+                                                                        <button class="btn btn-success next-btn">
+                                                                            Next Step
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="variable-form" class="col-md-0 invisible">
+                                                                <div class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Variables</legend>
+                                                                </div>
+
+
+                                                                <div class="control-group">
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success add-btn variable-add">
+                                                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add
+                                                                        </button>
+                                                                        <button class="btn btn-danger delete-btn variable-delete">
+                                                                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Delete
+                                                                        </button>
+                                                                        <button class="btn btn-success confirm-btn">
+                                                                            Confirm
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="confirm-table" class="col-md-0 invisible">
+                                                                <div class="">
+                                                                    <div style="height: 40px"></div>
+                                                                    <legend class="">Confirmation</legend>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" id="name-confirm"></label>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" id="people-confirm"></label>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" id="start-confirm"></label>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" id="end-confirm"></label>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" id="step-confirm"></label>
+
+                                                                </div>
+                                                                <div style="height: 30px"></div>
+                                                                <table class="table table-bordered" id="decision-confirm">
+                                                                    <caption>Decisions</caption>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Type</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div style="height: 30px"></div>
+                                                                <table class="table table-bordered" id="variable-confirm">
+                                                                    <caption>Variables</caption>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Equation</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="control-group">
+                                                                    <div class="controls">
+                                                                        <button class="btn btn-success submit-btn">
+                                                                            Submit
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-											</div>
-											<div id="create-form" class="col-md-0">
-                                            <form class="form-horizontal content-right">
-                                                <fieldset>
-												<div class="row">
-												    <div id="init-form" class="col-md-12">
 
-                                                    <div id="legend" class="">
-													    <div style="height: 40px"></div>
-                                                        <legend class="">Simulation Name</legend>
-                                                    </div>
-
-                                                    <div class="control-group">
-                                                        <div class="controls">
-                                                            <input type="text" placeholder="" class="input-xlarge">
-                                                        </div>
-                                                    </div>
-												
-
-													 <div id="legend" class="">
-													    <div style="height: 40px"></div>
-                                                        <legend class="">How Many Players</legend>
-                                                    </div>
-
-                                                    <div class="control-group">
-                                                        <div class="controls">
-                                                            <input type="text" placeholder="" class="input-xlarge">
-                                                        </div>
-                                                    </div>
-													
-														<div class="control-group">
-														    <div style="height: 40px"></div>
-                                                            <div class="controls">
-                                                                <button class="btn btn-success next-btn">
-                                                                    Next Step
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                
-													</div>
-													
-													<div id="basic-form" class="col-md-0 invisible">
-														<div class="control-group">
-														    <div style="height: 40px"></div>
-                                                            <div class="controls">
-                                                                <button class="btn btn-success next-btn">
-                                                                    Next Step
-                                                                </button>
-                                                            </div>
-                                                        </div>
-													</div> 
-													
-													<div id="decision-form" class="col-md-0 invisible">
-                                                    <div class="">
-													    <div style="height: 40px"></div>
-                                                        <legend class="">Decisions</legend>
-                                                    </div>
-
-
-                                                        <div class="control-group">
-                                                            <div class="controls">
-                                                                <button class="btn btn-success add-btn decision-add">
-                                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add
-                                                                </button>
-                                                                <button class="btn btn-danger delete-btn decision-delete">
-                                                                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Delete
-                                                                </button>
-                                                            </div>
-                                                        </div>
-														</div>
-                                                    </div>
-
-                                                </fieldset>
-                                            </form>
-											</div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
