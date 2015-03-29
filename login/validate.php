@@ -19,9 +19,10 @@ if(isset($_POST['inputSimId'])) {
 }
 
 if ($type == 2 && validate_prof($email, $password) == 1) {
+    echo "emil". $email;
     $_SESSION["email"] = $email;
     //header('Location: ../admin.php');
-    echo "email" + $_SESSION["email"];
+    echo "email" . $_SESSION["email"];
 }
 
 if ($type == 1 && validate_class($email, $password, $simId) == 1) {
