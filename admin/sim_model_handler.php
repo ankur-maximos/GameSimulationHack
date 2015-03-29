@@ -9,6 +9,7 @@ include_once("../db/admindboperations.php");
 }*/
 
 //$uuid = uniqid('uid_');
+try{
 $uuid = 123;
 echo $uuid;
 
@@ -63,6 +64,9 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
  initializeModelTable($uuid,$start_field,$end_field,$step_field);
  initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
  initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
-
+} catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+}
 
 ?>
