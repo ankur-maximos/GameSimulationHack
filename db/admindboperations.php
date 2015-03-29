@@ -131,13 +131,13 @@ function createVariableTable($sim_id) {
 
 // Creating the Decision Table corresponding Simulation
 
-$sim_name = $_POST["sim_name"];
-$sim_id = substr($sim_name,0,4).rand(1000,10000);
-$sim_password = $_POST["sim_password"];
-addSim($sim_id, $sim_password,$sim_name);
-$start_time = $_POST["start_time"];
-$end_time = $_POST["end_time"];
-$initial_steps = $_POST["initial_steps"];
-initializeModelTable($start_time, $end_time, $initial_steps);
+// $sim_name = $_POST["sim_name"];
+// $sim_id = substr($sim_name,0,4).rand(1000,10000);
+// $sim_password = $_POST["sim_password"];
+// addSim($sim_id, $sim_password,$sim_name);
+// $start_time = $_POST["start_time"];
+// $end_time = $_POST["end_time"];
+// $initial_steps = $_POST["initial_steps"];
+// initializeModelTable($start_time, $end_time, $initial_steps);
 
 ?>
