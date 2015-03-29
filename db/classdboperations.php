@@ -11,7 +11,12 @@ function addSim($sim_table, $sim_pass)
 	$stmt->bindValue(1, $user_id);
 	$stmt->bindValue(2, $sim_table);
 	$stmt->bindValue(3, $sim_pass);
-	$stmt->execute();
+	try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
 
 function simName() {
@@ -25,7 +30,7 @@ function simName() {
 
 	while($result = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		$name = $result['SIM_NAME'];
-		return $name
+		return $name;
 	}
 }
 
@@ -34,7 +39,8 @@ if (is_ajax()) {
   if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
     $action = $_POST["action"];
     switch($action) { //Switch case for value of action
-      case "reset": test_function(); break;
+      case "reset": reset_func(); break;
+      case "play": $data = $_POST["data"];play_func(); break;
     }
   }
 }
@@ -44,18 +50,40 @@ function is_ajax() {
   return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 }
 
-function test_function(){
-  $return = $_POST;
-  
-  //Do what you need to do with the info. The following are some examples.
-  //if ($return["favorite_beverage"] == ""){
-  //  $return["favorite_beverage"] = "Coke";
-  //}
-  //$return["favorite_restaurant"] = "McDonald's";
-  
-  $return["json"] = json_encode($return);
-  echo json_encode($return);
+function reset_function(){
+  $conn = connect();
+  $sql = "DELETE * from [user_rounds]";
+  try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
+    $sql = "DELETE * from [cumulative_rounds] where ROUND!=0";
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
+
+ function play_func() {
+
+ }
+
+ function initializeValues() {
+ 	$conn = connect();
+	$sql = "SELECT SIM_NAME from [SIMULATION_TABLES]";
+	$result = mysql_query($sql, $conn);
+	if(!$result) {
+		die("could not get the data :" . mysql_error());
+	}
+	while($result = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$name = $result['SIM_NAME'];
+		return $name;
+	}
+ }
 
   function fetchAllRounds() {
   	$conn = connect();
