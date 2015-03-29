@@ -21,6 +21,7 @@ if(isset($_POST['step-field'])) {
 $decision_num;
 if(isset($_POST['decision-num'])) {
     $decision_num  = $_POST['decision-num'];
+    echo $decision_num;
 }
 
 $decision_name_field = array();
