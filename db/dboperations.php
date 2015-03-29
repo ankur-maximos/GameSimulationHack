@@ -1,6 +1,6 @@
 <?php
-function markItemComplete($table, $item_id)
-{
+include(dbconnection.php);
+function markItemComplete($table, $item_id) {
 	$conn = connect();
 	$sql = "UPDATE ? SET is_complete = 1 WHERE id = ?";
 	$stmt = $conn->prepare($sql);
@@ -8,8 +8,7 @@ function markItemComplete($table, $item_id)
 	$stmt->bindValue(2, $item_id);
 	$stmt->execute();
 }
-function getAllItems($table)
-{
+function getAllItems($table) {
 	$conn = connect();
 	$sql = "SELECT * FROM ?";
 	$stmt = $conn->prepare($sql);
@@ -27,8 +26,7 @@ function getAllItems($table)
 	$stmt->bindValue(4, $is_complete);
 	$stmt->execute();
 }*/
-function deleteItem($table, $item_id)
-{
+function deleteItem($table, $item_id {
 	$conn = connect();
 	$sql = "DELETE FROM ? WHERE id = ?";
 	$stmt = $conn->prepare($sql);
