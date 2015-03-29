@@ -12,7 +12,12 @@ function addSim($sim_id, $sim_pass, $sim_name)
 	$stmt->bindValue(2, $sim_id);
 	$stmt->bindValue(3, $sim_pass);
 	$stmt->bindValue(4, $sim_name);
-	$stmt->execute();
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
 
 // Creating the Model table corresponding Add Simulation
@@ -36,7 +41,12 @@ function initializeModelTable($start_time, $end_time, $initial_steps,$sim_name) 
 	$stmt->bindValue(2, $start_time);
 	$stmt->bindValue(3, $end_time);
 	$stmt->bindValue(4, $initial_steps);
-	$stmt->execute();
+    try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
 
 //function for initializing decision table
@@ -56,7 +66,12 @@ function initDecisionTable($sim_id,$decision_vars,$types) {
 	$stmt->bindValue(2, $start_time);
 	$stmt->bindValue(3, $end_time);
 	$stmt->bindValue(4, $initial_steps);
-	$stmt->execute();
+	try {
+        $stmt->execute();
+    } catch(PDOException $e) {
+        print( "Error " );
+        die(print_r($e));
+    }
 }
 
 //function for initializing variables values
