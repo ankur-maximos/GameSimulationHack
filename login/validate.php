@@ -1,7 +1,7 @@
 <?php
 include("../db/newdbconn.php");
 
-$type = 0;
+$type;
 $email;
 $password;
 $active;
@@ -14,7 +14,9 @@ if(isset($_POST['inputEmail'])) {
 if(isset($_POST['inputPassword'])) {
     $password = $_POST['inputPassword'];
 }
-echo $type . $email . $password;
+echo $type;
+echo $email;
+echo $password;
 
 echo validate($email, $password, $type);
 if (validate($email, $password, $type) == 1) {
