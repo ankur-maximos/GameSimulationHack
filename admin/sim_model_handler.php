@@ -12,7 +12,7 @@ include("../db/admindboperations.php");
 //$uuid = uniqid('uid_');
 
 header('Location: ../index.html');
-
+/*
 try{
 
 if(isset($_POST['name-field'])) {
@@ -73,5 +73,5 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
         print( "Error " );
         die(print_r($e));
 }
-
+*/
 ?>
