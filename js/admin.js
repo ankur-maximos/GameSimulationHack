@@ -39,22 +39,26 @@ $(document).ready(function(){
 	$('#step-confirm').text("Initial Step:  "+$("input[name='step-field']").val());
 	
 	for(var i=0;i<decisionNum;i++) {
-		var decisionNameValue=$("input[name='decision-name-field']")[i];
-		var decisionTypeValue=$("select[name='decision-type-field']")[i];
+		var decisionNameValue=$("input[name='decision-name-field']")[0];
+		var decisionTypeValue=$("select[name='decision-type-field']")[0];
 		var txt=$('<tr></tr>');
 		txt.append($('<td></td>').text($(decisionNameValue).val()));
 		txt.append($('<td></td>').text($(decisionTypeValue).val()));
 		$('#decision-confirm').find('tbody').append(txt);
+		$(decisionNameValue).attr("name","decision-name-field" + (i+1));
+		$(decisionTypeValue).attr("name","decision-type-field" + (i+1));
 		
 	}
 	
 	for(var i=0;i<variableNum;i++) {
-		var variableNameValue=$("input[name='variable-name-field']")[i];
-		var variableTypeValue=$("input[name='variable-equation-field']")[i];
+		var variableNameValue=$("input[name='variable-name-field']")[0];
+		var variableTypeValue=$("input[name='variable-equation-field']")[0];
 		var txt=$('<tr></tr>');
 		txt.append($('<td></td>').text($(variableNameValue).val()));
 		txt.append($('<td></td>').text($(variableTypeValue).val()));
 		$('#variable-confirm').find('tbody').append(txt);
+		$(variableNameValue).attr("name","variable-name-field" + (i+1));
+		$(variableTypeValue).attr("name","variable-equation-field" + (i+1));
 		
 	}
 	
