@@ -6,6 +6,7 @@ include('dbconnection.php');
 
 function addSim($sim_id, $sim_pass, $sim_name)
 {
+	echo "add Sim ";
 	$conn = connect();
 	$sql = "INSERT INTO [simulation_table] (User_ID,Sim_ID,Sim_Password,Sim_Name) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
@@ -39,6 +40,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
 
 function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 	$conn = connect();
+	echo "initializeModelTable";
 	$sql = "INSERT INTO [sim_model_table] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $sim_id);
@@ -58,6 +60,7 @@ function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 //function for initializing decision table
 function initializeDecisionTable($sim_id,$decision_vars,$types) {
 	$conn = connect();
+	echo "initializeDecisionTable";
 	createDecisionTable($sim_id);
 	
 	for($i = 0; $i < count($decision_vars); $i++) {
@@ -82,6 +85,7 @@ function initializeDecisionTable($sim_id,$decision_vars,$types) {
 //function for initializing variables values
 function initializeVariableTable($sim_id,$variable_vars,$equations) {
 	$conn = connect();
+	echo "initializeVariableTable";
 	createVariableTable($sim_id);
 	for($i = 0; $i < count($variable_vars); $i++) {
 	    $sql = "INSERT INTO [variable" . $sim_id . "] (V_NAME,V_EQUATION) VALUES(?,?)";
@@ -102,6 +106,7 @@ function initializeVariableTable($sim_id,$variable_vars,$equations) {
 }
 
 function createDecisionTable($sim_id) {
+	echo "createDecisionTable";
 	$conn = connect();
 	$sql = "CREATE TABLE [decision".$sim_id."] (D_NAME varchar(255),D_TYPE int)";
     $stmt = $conn->prepare($sql);	
@@ -115,6 +120,7 @@ function createDecisionTable($sim_id) {
 }
 
 function createVariableTable($sim_id) {
+	echo "createVariableTable";
 	$conn = connect();
 	$sql = "CREATE TABLE [variable" . $sim_id ."] (V_NAME varchar(255),V_EQUATION varchar(255))";
     $stmt = $conn->prepare($sql);	
