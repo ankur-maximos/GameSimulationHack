@@ -11,6 +11,7 @@ function addSim($sim_id, $sim_pass, $sim_name)
 	$sql = "INSERT INTO [simulation_table] (User_ID,Sim_ID,Sim_Password,Sim_Name) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
 	$user_id = $_SESSION("email");
+	echo "user_id ". $user_id;
 	$stmt->bindValue(1, $user_id);
 	$stmt->bindValue(2, $sim_id);
 	$stmt->bindValue(3, $sim_pass);
