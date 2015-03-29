@@ -1,5 +1,5 @@
 <?php
-include("../db/newdbconn.php");
+include("../db/dboperations.php");
 
 $type;
 $email;
