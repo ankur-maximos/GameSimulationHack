@@ -29,9 +29,10 @@ $(function() {
 			type: "POST",
 			success: function( data ) {
 				$( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
-			}
-			error: function(data) {
-				return false;
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				console.log(xhr.status);
+				console.log(thrownError);
 			}
 		});
 	});
@@ -41,14 +42,16 @@ $(function() {
 		$('#loading').html('<img src="http://preloaders.net/preloaders/287/Filling%20broken%20ring.gif"> loading...');
 		$.ajax({
 			url: "../db/classdboperations.php",
+			type:POST,
 			data: {
 				"action": "reset"
 			},
 			success: function( data ) {
 				$( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
-			}
-			error: function(data) {
-				return false;
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
+				console.log(xhr.status);
+				console.log(thrownError);
 			}
 		});
 	});
