@@ -23,7 +23,7 @@ function validate($username, $password, $type) {
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
     $stmt->bindValue(3, $type);
-    return $sql;
+    return $stmt;
     return $stmt->execute();
 }
 function deleteItem($table, $item_id) {
