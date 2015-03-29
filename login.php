@@ -41,13 +41,13 @@
         <h3 class="form-signin-heading">Log in</h3>
         <h5>Please choose your account type</h5>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Inidividual
+          <input type="radio" name="radio" id="inlineRadio1" value="1"> Inidividual
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Class group
+          <input type="radio" name="radio" id="inlineRadio2" value="2"> Class group
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Admin
+          <input type="radio" name="radio" id="inlineRadio3" value="3"> Admin
         </label>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
