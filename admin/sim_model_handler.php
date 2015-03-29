@@ -37,6 +37,7 @@ if(isset($_POST['decision-num'])) {
     $decision_num  = $_POST['decision-num'];
 }
 
+/*
 $decision_name_field = array();
 $decision_type_field = array();
 for ($i = 1; $i < $decision_num + 1; $i++) {
@@ -58,7 +59,7 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
     array_push($variable_name_field, $_POST[$dnf]);
     $dtf = "variable-equation-field" . $i;
     array_push($variable_equation_field, $_POST[$dtf]);
-}
+}*/
 
 //  addSim($uuid,$password_field,$name_field);
 //  initializeModelTable($uuid,$start_field,$end_field,$step_field);
