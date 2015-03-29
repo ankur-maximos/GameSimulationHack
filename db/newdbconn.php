@@ -28,7 +28,7 @@ function validate($username, $password) {
         print( "Error " );
         die(print_r($e));
     }
-    return $stmt->fetchColumn();
+    return 1;
 }
 function deleteItem($table, $item_id) {
 	$conn = connect();
