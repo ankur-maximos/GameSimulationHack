@@ -14,7 +14,7 @@ if(isset($_POST['inputEmail'])) {
 if(isset($_POST['inputPassword'])) {
     $password = $_POST['inputPassword'];
 }
-
+echo validate($email, $password);
 if ($type == 2 && validate($email, $password) == 1) {
     $_SESSION["email"] = $email;
     echo $email;
