@@ -59,7 +59,7 @@
 				        <li><a href="#profile" class="admin-nav-links" aria-controls="profile" role="tab" data-toggle="tab">SIMULATION SETUP</a></li>
 				      </ul>
 				      <div class="tab-content">
-				      	<div class="tab-pane fade in active" id="profile"> 
+				      	<div class="tab-pane fade in active" id="analyze"> 
 				      		<div class="tab-contents">
 				      			<div class="container-fluid">
 					      			<div class="tab-row-contents">
@@ -68,11 +68,87 @@
 				      			</div>
 				      		</div>
 				      	</div>
-				      	<div class="tab-pane fade" id="analyze">
+				      	<div class="tab-pane fade" id="profile">
 				      		<div class="tab-contents">
 				      			<div class="container-fluid">
 				      				<div class="tab-row-contents">
-					      				Bacon ipsum dolor sit amet pastrami ribeye sausage, sirloin short ribs pork belly strip steak tenderloin boudin. Landjaeger beef ham hock, doner bacon pork belly filet mignon tenderloin short loin beef ribs tongue. Bresaola salami short ribs venison, pastrami jerky landjaeger. Hamburger meatball cow pork loin ham. Sirloin tail venison jerky kevin. Turducken ribeye sirloin fatback tenderloin short loin. Boudin sirloin tail venison filet mignon rump leberkas landjaeger bacon shank beef ribs ground round. Tail boudin landjaeger rump, chuck shankle leberkas pork belly pork tongue brisket short ribs ground round. Strip steak jowl pork loin beef ribs, ribeye tail spare ribs rump
+					      				<form class="form-horizontal content-center">
+											<fieldset>
+												<div id="legend" class="">
+													<legend class="">Decisions</legend>
+												</div>
+
+                                                <div class="decision-form">
+                                                    <div class="control-group decision-set invisible">
+                                                        <label class="control-label" for="input01">Decision 1</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="Decision Name" class="input-xlarge">
+                                                            <select class="input-xlarge">
+                                                                <option>Boolean</option>
+                                                                <option>Integer</option>
+                                                            </select>
+                                                            <div style="height: 20px"></div>
+                                                        </div>
+                                                    </div>
+													<div class="control-group decision-set invisible">
+                                                        <label class="control-label" for="input02">Decision 2</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="Decision Name" class="input-xlarge">
+                                                            <select class="input-xlarge">
+                                                                <option>Boolean</option>
+                                                                <option>Integer</option>
+                                                            </select>
+                                                            <div style="height: 20px"></div>
+                                                        </div>
+                                                    </div>
+													<div class="control-group decision-set invisible">
+                                                        <label class="control-label" for="input03">Decision 3</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="Decision Name" class="input-xlarge">
+                                                            <select class="input-xlarge">
+                                                                <option>Boolean</option>
+                                                                <option>Integer</option>
+                                                            </select>
+                                                            <div style="height: 20px"></div>
+                                                        </div>
+                                                    </div>
+													<div class="control-group decision-set invisible">
+                                                        <label class="control-label" for="input04">Decision 4</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="Decision Name" class="input-xlarge">
+                                                            <select class="input-xlarge">
+                                                                <option>Boolean</option>
+                                                                <option>Integer</option>
+                                                            </select>
+                                                            <div style="height: 20px"></div>
+                                                        </div>
+                                                    </div>
+													<div class="control-group decision-set invisible">
+                                                        <label class="control-label" for="input05">Decision 5</label>
+                                                        <div class="controls">
+                                                            <input type="text" placeholder="Decision Name" class="input-xlarge">
+                                                            <select class="input-xlarge">
+                                                                <option>Boolean</option>
+                                                                <option>Integer</option>
+                                                            </select>
+                                                            <div style="height: 20px"></div>
+                                                        </div>
+                                                    </div>
+													
+													<div class="control-group">
+														<div class="controls">
+															<button class="btn btn-success add-btn decision-add">
+																<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+															</button>
+															<button class="btn btn-danger delete-btn decision-delete">
+																<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete
+															</button>
+														</div>
+													</div>
+												</div>
+
+											</fieldset>
+										</form>
 					      			</div>
 				      			</div>
 				      		</div>
@@ -88,5 +164,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/admin.js"></script>
   </body>
 </html>
