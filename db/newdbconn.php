@@ -30,7 +30,8 @@ function validate($username, $password, $type) {
     try {
         $stmt->execute();
     } catch(PDOException $e) {
-        echo $e->getMessage();
+        print( "Error " );
+        die(print_r($e));
     }
 }
 function deleteItem($table, $item_id) {
