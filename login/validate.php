@@ -26,7 +26,7 @@ if(isset($_POST['inputSimId'])) {
 
 if ($type == 2 && validate_prof($email, $password) == 1) {
     //$_SESSION["email"] = $email;
-    setcookie("email", $email);
+    setcookie("email", $email, time()+3600, "../", "gamesimu.me", 1);
     header('Location: ../admin.php');
     exit();
 }
