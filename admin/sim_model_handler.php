@@ -8,7 +8,8 @@ include_once("../db/admindboperations.php");
    return array_slice($rand_array,0,$limit);
 }*/
 
-$uuid = uniqid('uid_');
+//$uuid = uniqid('uid_');
+$uuid = 123;
 echo $uuid;
 
 if(isset($_POST['name-field'])) {
@@ -58,10 +59,10 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
     array_push($variable_equation_field, $_POST[$dtf]);
 }
 
-// addSim($uuid,$password_field,$name_field);
-// initializeModelTable($uuid,$start_field,$end_field,$step_field);
-// initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
-// initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
+ addSim($uuid,$password_field,$name_field);
+ initializeModelTable($uuid,$start_field,$end_field,$step_field);
+ initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
+ initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
 
 
 ?>
