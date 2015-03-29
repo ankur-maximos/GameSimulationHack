@@ -1,7 +1,9 @@
 <?php
 include("../db/newdbconn.php");
+echo "ok";
 if(isset($_POST['name-field'])) {
     $name_field = $_POST['name-field'];
+    echo $name_field;
 }
 if(isset($_POST['people-field'])) {
     $people_field = $_POST['people-field'];
