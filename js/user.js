@@ -23,8 +23,7 @@ $(function() {
 		$.ajax({
 			url: "../db/classdboperations.php",
 			data: {
-				"action": "play",
-				
+				"action": "play"
 			},
 			type: "POST",
 			success: function( data ) {

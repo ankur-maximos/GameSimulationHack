@@ -54,7 +54,10 @@ include("classdboperations.db");
 							$rounds = fetchAllRounds();
 							foreach ($rounds as $key => $value) {
 								 	# code...
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Round I</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Round II</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Round III</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Round IV</a></li> 
 							} 
 							?>
 
@@ -110,19 +113,19 @@ include("classdboperations.db");
 													</div>
 												</form>
 												<div id="players">
-												<div class="form-group">
-													<label>Incumbents(Player who played prior rounds)</label>
-													<label>[from DB]</label>
-												</div>
-												<div class="form-group">
-													<label>New Entries(Players who enter this round)</label>
-													<label>[from DB]</label>
+													<div class="form-group">
+														<label>Incumbents(Player who played prior rounds)</label>
+														<label>[from DB]</label>
+													</div>
+													<div class="form-group">
+														<label>New Entries(Players who enter this round)</label>
+														<label>[from DB]</label>
 
-												</div>
-												<div class="from-group">
-													<label>Total Rivals(N players competing this round)</label>
-													<label>[from DB]</label>
-												</div>
+													</div>
+													<div class="from-group">
+														<label>Total Rivals(N players competing this round)</label>
+														<label>[from DB]</label>
+													</div>
 												</div>
 
 												<legend>CURRENT ROUND STATISTICS</legend>
@@ -130,31 +133,31 @@ include("classdboperations.db");
 													<?php while($row { ?>
 													<tr>
 														<td><label>Entry Cost</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 4</td>
 													</tr>
 													<tr>
 														<td><label>Cost Function(Random)</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 14</td>
 													</tr>
 													<tr>
 														<td><label>Competitive Cost Function</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 18</td>
 													</tr>
 													<tr>
 														<td><label>Price</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 24</td>
 													</tr>
 													<tr>
 														<td><label>Marginal Profit</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 56</td>
 													</tr>
 													<tr>
 														<td><label>Profit</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 78</td>
 													</tr>
 													<tr>
 														<td><label>Marginal Profit</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 89</td>
 													</tr>
 													<?php } ?>
 												</table>
@@ -164,23 +167,23 @@ include("classdboperations.db");
 													<?php while($row  { ?>
 													<tr>
 														<td><label>Average Marginal cost</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 2</td>
 													</tr>
 													<tr>
 														<td><label>Average cost percentile</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 12</td>
 													</tr>
 													<tr>
 														<td><label>Minimum cost</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 22</td>
 													</tr>
 													<tr>
 														<td><label>Maximum cost</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 88</td>
 													</tr>
 													<tr>
 														<td><label>Average Marginal profitability</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 122</td>
 													</tr>
 													<?php } ?>
 												</table>
@@ -190,19 +193,19 @@ include("classdboperations.db");
 													<?php while($row  { ?>
 													<tr>
 														<td><label>Cumulative Fixed Cost Investment</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 10</td>
 													</tr>
 													<tr>
 														<td><label>Cumulative Marginal Investment</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 23</td>
 													</tr>
 													<tr>
 														<td><label>Cumulative Revenue</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 45</td>
 													</tr>
 													<tr>
 														<td><label>Cumulative Overall Profitability</label></td>
-														<td><?php echo $row['column2_name']; ?> jnkjd</td>
+														<td><?php echo $row['column2_name']; ?> 78</td>
 													</tr>
 													<?php } ?>
 												</table>
