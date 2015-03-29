@@ -24,9 +24,10 @@ function validate($username, $password, $type) {
     $stmt->bindValue(1, $username);
     $stmt->bindValue(2, $password);
     $stmt->bindValue(3, $type);
-    //$rows->query($stmt);
-    $result->execute(); 
-    return $result->fetchColumn();
+    $rows->query($stmt);
+    //$result->execute(); 
+    //return $result->fetchColumn();
+    return count($rows);
 }
 function deleteItem($table, $item_id) {
 	$conn = connect();
