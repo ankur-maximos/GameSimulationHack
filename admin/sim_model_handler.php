@@ -38,7 +38,7 @@ if(isset($_POST['variable-num'])) {
 }
 
 $variable_name_field = array();
-$variable_equation_type_field = array();
+$variable_equation_field = array();
 for ($i = 1; $i < $variable_num + 1; $i++) {
     $dnf = "variable-name-field" . $i;
     array_push($variable_name_field, $_POST[$dnf]);
