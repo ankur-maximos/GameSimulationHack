@@ -20,8 +20,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<?php
-	    //session_start();
-        if (session_status() !== PHP_SESSION_ACTIVE) {
+	    session_start();
+        if (session_status() == PHP_SESSION_NONE) {
             header('Location: login.php');
         }
     ?>
