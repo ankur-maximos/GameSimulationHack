@@ -1,5 +1,5 @@
 <?php
-include(dbconnection.php);
+include('dbconnection.php');
 
 // Creating a new Simulation into already existing SIMULATION_TABLES
 function addSim($sim_id, $sim_pass, $sim_name)
@@ -33,11 +33,11 @@ function addSim($sim_id, $sim_pass, $sim_name)
 }*/
 
 // Initializing the model table created into existing SIM_MODEL_TABLE
-function initializeModelTable($start_time, $end_time, $initial_steps,$sim_name) {
+function initializeModelTable($sim_id,$start_time, $end_time, $initial_steps) {
 	$conn = connect();
-	$sql = "INSERT INTO [SIM_MODEL_TABLE] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
+	$sql = "INSERT INTO [sim_model_table] (SIM_ID,START_TIME,END_TIME,INITIAL_STEPS) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(1, $sim_name);
+	$stmt->bindValue(1, $sim_id);
 	$stmt->bindValue(2, $start_time);
 	$stmt->bindValue(3, $end_time);
 	$stmt->bindValue(4, $initial_steps);
