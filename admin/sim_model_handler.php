@@ -18,11 +18,12 @@ if(isset($_POST['step-field'])) {
     $start_field = $_POST['step-field'];
 }
 
+echo "ko";
 $decision_num;
 if(isset($_POST['decision-num'])) {
     $decision_num  = $_POST['decision-num'];
 }
-
+echo "qwerty";
 $decision_name_field = array();
 $decision_type_field = array();
 for ($i = 1; $i < $decision_num + 1; $i++) {
@@ -31,7 +32,7 @@ for ($i = 1; $i < $decision_num + 1; $i++) {
     $dtf = "decision-type-field" . $i;
     array_push($decision_type_field, $_POST[$dtf]);
 }
-
+echo "zxcv";
 $variable_num;
 if(isset($_POST['variable-num'])) {
     $variable_num  = $_POST['variable-num'];
