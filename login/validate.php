@@ -21,4 +21,5 @@ if (validate($email, $password, $type) == 1) {
     echo $email;
     header('Location: http://www.google.com');
 }
+echo $email;
 ?>
