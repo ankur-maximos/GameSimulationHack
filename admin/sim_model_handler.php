@@ -7,16 +7,23 @@ if(isset($_POST['name-field'])) {
 }
 if(isset($_POST['people-field'])) {
     $people_field = $_POST['people-field'];
+    echo $people_field;
 }
 if(isset($_POST['start-field'])) {
     $start_field = $_POST['start-field'];
+    echo $start_field;
 }
 if(isset($_POST['end-field'])) {
-    $start_field = $_POST['end-field'];
+    $end_field = $_POST['end-field'];
+    echo $end_field;
 }
 if(isset($_POST['step-field'])) {
-    $start_field = $_POST['step-field'];
+    $step_field = $_POST['step-field'];
+    echo $step_field;
 }
+
+echo $_POST['decision-name-field0'];
+echo $_POST['decision-type-field0'];
 
 $decision_num;
 if(isset($_POST['decision-num'])) {
