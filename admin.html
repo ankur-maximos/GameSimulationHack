@@ -71,9 +71,21 @@
                             <div class="tab-pane fade" id="profile">
                                 <div class="tab-contents">
                                     <div class="container-fluid">
-                                        <div class="tab-row-contents">
-                                            <form class="form-horizontal content-center">
+                                        <div class="tab-row-contents row">
+										    <div id="admin-welcome" class="col-md-12">
+											            <div class="control-group">
+                                                            <div class="controls">
+                                                                <button id="create-btn" class="btn btn-success">
+                                                                    Create a new simulation
+                                                                </button>
+                                                            </div>
+                                                        </div>
+											</div>
+											<div id="create-form" class="col-md-0">
+                                            <form class="form-horizontal content-right">
                                                 <fieldset>
+												<div class="row">
+												    <div id="init-form" class="col-md-12">
 
                                                     <div id="legend" class="">
 													    <div style="height: 40px"></div>
@@ -85,6 +97,7 @@
                                                             <input type="text" placeholder="" class="input-xlarge">
                                                         </div>
                                                     </div>
+												
 
 													 <div id="legend" class="">
 													    <div style="height: 40px"></div>
@@ -96,68 +109,35 @@
                                                             <input type="text" placeholder="" class="input-xlarge">
                                                         </div>
                                                     </div>
-
-                                                    <div id="Div1" class="">
+													
+														<div class="control-group">
+														    <div style="height: 40px"></div>
+                                                            <div class="controls">
+                                                                <button class="btn btn-success next-btn">
+                                                                    Next Step
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                
+													</div>
+													
+													<div id="basic-form" class="col-md-0 invisible">
+														<div class="control-group">
+														    <div style="height: 40px"></div>
+                                                            <div class="controls">
+                                                                <button class="btn btn-success next-btn">
+                                                                    Next Step
+                                                                </button>
+                                                            </div>
+                                                        </div>
+													</div> 
+													
+													<div id="decision-form" class="col-md-0 invisible">
+                                                    <div class="">
 													    <div style="height: 40px"></div>
                                                         <legend class="">Decisions</legend>
                                                     </div>
 
-                                                    <div class="decision-form">
-                                                        <div class="control-group decision-set invisible">
-                                                            <label class="control-label" for="input01">Decision 1</label>
-                                                            <div class="controls">
-                                                                <input type="text" placeholder="Decision Name" class="input-xlarge">
-                                                                <select class="input-xlarge">
-                                                                    <option>Boolean</option>
-                                                                    <option>Integer</option>
-                                                                </select>
-                                                                <div style="height: 20px"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group decision-set invisible">
-                                                            <label class="control-label" for="input02">Decision 2</label>
-                                                            <div class="controls">
-                                                                <input type="text" placeholder="Decision Name" class="input-xlarge">
-                                                                <select class="input-xlarge">
-                                                                    <option>Boolean</option>
-                                                                    <option>Integer</option>
-                                                                </select>
-                                                                <div style="height: 20px"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group decision-set invisible">
-                                                            <label class="control-label" for="input03">Decision 3</label>
-                                                            <div class="controls">
-                                                                <input type="text" placeholder="Decision Name" class="input-xlarge">
-                                                                <select class="input-xlarge">
-                                                                    <option>Boolean</option>
-                                                                    <option>Integer</option>
-                                                                </select>
-                                                                <div style="height: 20px"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group decision-set invisible">
-                                                            <label class="control-label" for="input04">Decision 4</label>
-                                                            <div class="controls">
-                                                                <input type="text" placeholder="Decision Name" class="input-xlarge">
-                                                                <select class="input-xlarge">
-                                                                    <option>Boolean</option>
-                                                                    <option>Integer</option>
-                                                                </select>
-                                                                <div style="height: 20px"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="control-group decision-set invisible">
-                                                            <label class="control-label" for="input05">Decision 5</label>
-                                                            <div class="controls">
-                                                                <input type="text" placeholder="Decision Name" class="input-xlarge">
-                                                                <select class="input-xlarge">
-                                                                    <option>Boolean</option>
-                                                                    <option>Integer</option>
-                                                                </select>
-                                                                <div style="height: 20px"></div>
-                                                            </div>
-                                                        </div>
 
                                                         <div class="control-group">
                                                             <div class="controls">
@@ -169,10 +149,12 @@
                                                                 </button>
                                                             </div>
                                                         </div>
+														</div>
                                                     </div>
 
                                                 </fieldset>
                                             </form>
+											</div>
                                         </div>
                                     </div>
                                 </div>
