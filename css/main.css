@@ -90,10 +90,10 @@ span.icon:before {
 }
 
 .tab-row-contents {
-	align: center;
+	align: right;
 }
 
-.content-center{
+.content-right{
     margin: 0 auto;
 	width: 800px;
 }
@@ -106,4 +106,10 @@ span.icon:before {
 .visible {
 	opacity: 1;
 }
+
+.col-md-00 {
+    width: 0;
+}
+
+
 
