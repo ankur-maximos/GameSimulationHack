@@ -1,5 +1,15 @@
 <?php
 include("../db/newdbconn.php");
+include("../db/admindboperations.php");
+
+/*function randNum($begin=0,$end=20,$limit=5){
+   $rand_array=range($begin,$end);
+   shuffle($rand_array);
+   return array_slice($rand_array,0,$limit);
+}*/
+
+$uuid = uniqid('uid_');
+echo $uuid;
 
 if(isset($_POST['name-field'])) {
     $name_field = $_POST['name-field'];
@@ -15,6 +25,9 @@ if(isset($_POST['end-field'])) {
 }
 if(isset($_POST['step-field'])) {
     $step_field = $_POST['step-field'];
+}
+if(isset($_POST['password-field'])) {
+    $password_field = $_POST['password-field'];
 }
 
 $decision_num;
@@ -44,11 +57,11 @@ for ($i = 1; $i < $variable_num + 1; $i++) {
     $dtf = "variable-equation-field" . $i;
     array_push($variable_equation_field, $_POST[$dtf]);
 }
-/*foreach ($variable_name_field as $vnf) {
-    print($vnf);*/
-}
 
-
+//addSim($uuid,$password_field,$name_field);
+//initializeModelTable($uuid,$start_field,$end_field,$step_field);
+//initializeDecisionTable($uuid,$decision_name_field,$decision_type_field);
+//initializeVariableTable($uuid,$variable_name_field,$variable_equation_field);
 
 
 ?>
